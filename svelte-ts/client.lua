@@ -8,18 +8,18 @@ CreateThread(function ()
     local function AddApp()
         local added, errorMessage = exports["lb-phone"]:AddCustomApp({
             identifier = identifier,
-            name = "React TS",
-            description = "Template app using react",
-            developer = "Breze",
+            name = "Svelte TS",
+            description = "Template app using Svelte",
+            developer = "eeharumt",
             defaultApp = true, -- OPTIONAL if set to true, app should be added without having to download it,
             size = 59812, -- OPTIONAL in kb
             -- price = 0, -- OPTIONAL, Make players pay with in-game money to download the app
-            images = {"https://example.com/photo.jpg"}, -- OPTIONAL array of images for the app on the app store
+            -- images = {"https://example.com/photo.jpg"}, -- OPTIONAL array of images for the app on the app store
 
             ui = GetCurrentResourceName() .. "/ui/dist/index.html", -- built version
             -- ui = "http://localhost:3000", -- dev version
 
-            icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/icon.png"
+            icon = "https://cfx-nui-" .. GetCurrentResourceName() .. "/ui/dist/favicon.png"
         })
 
         if not added then
